@@ -24,4 +24,12 @@ public class ItemService {
 	public Item getItemById(String id) {
 		return itemRepo.findById(id).get();
 	}
+	
+	public void saveItem(Item item) {
+		itemRepo.save(item);
+	}
+	
+	public void deleteItem(String id) {
+		itemRepo.deleteById(id);
+	}
 }
